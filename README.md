@@ -38,7 +38,14 @@ No step in this pipeline calls an external API. No user data — including sensi
 
 ---
 
-## 🏆 Why Setu Stands Out 
+---
+##  Images
+<img width="830" height="690" alt="Screenshot 2026-09-07 230945" src="https://github.com/user-attachments/assets/5df75ed5-d5b4-42c4-9b6f-e3c3b276e45c" />
+
+<img width="1919" height="856" alt="Screenshot 2026-09-07 224421" src="https://github.com/user-attachments/assets/8142f880-7170-4499-ab6b-a4bb9dc8ef5a" />
+
+---
+##  Why Setu Stands Out 
 
 - **Absolute Data Privacy**: Users must share sensitive socioeconomic data (income, caste, family size, disabilities) to check eligibility. Because Setu runs 100% locally, **Personally Identifiable Information (PII) never touches a corporate cloud**.
 - **Zero-Cost Scalability (No OPEX)**: NGOs, Common Service Centres (CSCs), and Anganwadi workers operate on shoestring budgets. By eliminating external API dependencies, Setu has **zero per-query cost** and can run indefinitely on commodity hardware.
