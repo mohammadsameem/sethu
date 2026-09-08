@@ -36,13 +36,12 @@ No step in this pipeline calls an external API. No user data — including sensi
 - **Voice in, voice out** — on-device browser speech APIs for both transcription and playback, chosen deliberately over heavy local binaries to keep the deployment footprint small.
 - **Deliberately non-generic visual design** — a civic, trustworthy aesthetic rather than the default AI-app look.
 
----
 
 ---
 ##  Images
-<img width="830" height="690" alt="Screenshot 2026-09-07 230945" src="https://github.com/user-attachments/assets/5df75ed5-d5b4-42c4-9b6f-e3c3b276e45c" />
+<img width="830" height="690" alt="Screenshot 2026-09-07 230945" src="https://github.com/user-attachments/assets/5df75ed5-d5b4-42c4-9b6f-e3c3b276e45c" />\
 
-<img width="1919" height="856" alt="Screenshot 2026-09-07 224421" src="https://github.com/user-attachments/assets/8142f880-7170-4499-ab6b-a4bb9dc8ef5a" />
+<img width="1096" height="789" alt="image" src="https://github.com/user-attachments/assets/e6ee1899-e83d-466a-9d22-5e88d7b3cd7c" />
 
 ---
 ##  Why Setu Stands Out 
