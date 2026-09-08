@@ -1,0 +1,10 @@
+{
+  "name": "Sethu",
+  "description": "An offline-first-styled, voice-enabled assistant that tells users which Indian government welfare schemes they're eligible for.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

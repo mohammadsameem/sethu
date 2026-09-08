@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>
+      (function() {
+        var currentFetch = null;
+        var origDefineProperty = Object.defineProperty;
+        try {
+          var initialFetch = window.fetch;
+          origDefineProperty.call(Object, window, 'fetch', {
+            configurable: true,
+            enumerable: true,
+            get: function() {
+              return currentFetch || initialFetch;
+            },
+            set: function(newVal) {
+              currentFetch = newVal;
+            }
+          });
+        } catch (e) {}
+
+        Object.defineProperty = function(obj, prop, descriptor) {
+          if ((obj === window || obj === globalThis) && prop === 'fetch' && descriptor) {
+            var originalGet = descriptor.get;
+            var originalSet = descriptor.set;
+            var safeDescriptor = {
+              configurable: true,
+              enumerable: descriptor.enumerable !== undefined ? descriptor.enumerable : true,
+              get: function() {
+                var f = currentFetch || (originalGet ? originalGet.call(this) : descriptor.value);
+                return typeof f === 'function' ? f.bind(this || window) : f;
+              },
+              set: function(newVal) {
+                currentFetch = newVal;
+                if (originalSet) {
+                  originalSet.call(this, newVal);
+                }
+              }
+            };
+            return origDefineProperty.call(Object, obj, prop, safeDescriptor);
+          }
+          return origDefineProperty.apply(Object, arguments);
+        };
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sethu</title>
+    <meta name="description" content="An offline-first-styled, voice-enabled assistant that tells users which Indian government welfare schemes they're eligible for." />
+    <meta property="og:title" content="Sethu" />
+    <meta property="og:description" content="An offline-first-styled, voice-enabled assistant that tells users which Indian government welfare schemes they're eligible for." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
